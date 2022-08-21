@@ -1,0 +1,38 @@
+{% extends 'base.html'  %}
+{% block body %}
+<div class="container">
+    <div class="row">
+        <div class="text-center">
+        <div class="rounded-3">
+           <img src="{{movie.img.url}}" width="250" height="250"><br><br>
+        </div>
+            <div class="display-5">{{movie.name}}</div>
+           <p class="blockquote"> {{movie.desc}}</p>
+           <strong>Released year : {{movie.year}}</strong><br><br>
+        <a class="btn btn-warning" href="{% url 'webapp:update' movie.id %}">update</a>
+        <a class="btn btn-danger" href="{% url 'webapp:delete' movie.id%}">Delete</a>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
+
+
+
+
+
+
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Title</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--{% for i in movie_list %}-->
+<!--{{i.desc}} >>>>> {{i.year}}-->
+<!--{% endfor %}-->
+<!--</body>-->
+<!--</html>-->
